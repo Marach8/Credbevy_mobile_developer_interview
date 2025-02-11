@@ -1,5 +1,6 @@
 export 'package:flutter/material.dart';
 export 'package:flutter_riverpod/flutter_riverpod.dart';
+export 'package:iconsax/iconsax.dart';
 
 export 'core/core_export.dart';
 export 'shared/shared_export.dart';

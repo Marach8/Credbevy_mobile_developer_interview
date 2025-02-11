@@ -1,19 +1,21 @@
 import 'package:credbevy_task/src/global_export.dart';
 
-class OutlinedBtn extends StatelessWidget {
+class CredBevyOutlinedBtn extends StatelessWidget {
   final VoidCallback onPressed;
-  final String btnTitle;
-  const OutlinedBtn({
+  final String? btnTitle;
+  final Widget? child;
+  const CredBevyOutlinedBtn({
     super.key,
     required this.onPressed,
-    required this.btnTitle
+    this.btnTitle,
+    this.child
   });
 
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
       onPressed: onPressed,
-      child: Text(btnTitle),
+      child: child ?? Text(btnTitle ?? ''),
     );
   }
 }

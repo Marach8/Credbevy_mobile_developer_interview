@@ -1,13 +1,12 @@
 import 'package:credbevy_task/src/global_export.dart';
-import 'package:credbevy_task/src/shared/utils/constants/colors.dart';
 import 'package:flutter/services.dart';
 
-class ShamaAnnotatedRegionWidget extends StatelessWidget {
+class CredBevyAnnotatedRegion extends StatelessWidget {
   final Widget child;
   final Brightness? brightness;
   final Color? bgColor;
 
-  const ShamaAnnotatedRegionWidget({
+  const CredBevyAnnotatedRegion({
     super.key,
     required this.child,
     this.bgColor,
@@ -18,8 +17,8 @@ class ShamaAnnotatedRegionWidget extends StatelessWidget {
   Widget build(context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
-        systemNavigationBarColor: bgColor ?? CredBevColors.white,
-        statusBarColor: bgColor ?? CredBevColors.white,
+        systemNavigationBarColor: bgColor ?? CredBevyColors.white,
+        statusBarColor: bgColor ?? CredBevyColors.white,
         statusBarIconBrightness: brightness ?? Brightness.dark,
         systemNavigationBarIconBrightness: brightness ?? Brightness.dark
       ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CredBevContainer extends StatelessWidget {
+class CredBevyContainer extends StatelessWidget {
   final EdgeInsetsGeometry? padding, margin;
   final Color? color;
   final double? height, width, radius;
   final BoxBorder? border;
-  final Widget child;
+  final Widget? child;
   final BoxShape? boxShape;
   final BoxConstraints? constraints;
   final Gradient? gradient;
@@ -18,7 +18,7 @@ class CredBevContainer extends StatelessWidget {
   final Curve curve;
   final VoidCallback? onTap, onLongPress;
 
-  const CredBevContainer({
+  const CredBevyContainer({
     super.key,
     this.padding,
     this.color,
@@ -34,7 +34,7 @@ class CredBevContainer extends StatelessWidget {
     this.duration,
     this.decorationImageFit,
     this.decorationImagePath,
-    required this.child,
+    this.child,
     this.clipBehavior = Clip.none,
     this.boxShadow,
     this.curve = Curves.linear,
@@ -69,7 +69,7 @@ class CredBevContainer extends StatelessWidget {
           boxShadow: boxShadow,
           borderRadius: boxShape == null ? BorderRadius.circular(radius ?? 0) : null
         ),
-        child: child,
+        child: child ?? const SizedBox.shrink(),
       ),
     );
   }

@@ -27,6 +27,7 @@ class CredBevApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         darkTheme: CredBevThemeData.lightTheme,
         theme: CredBevThemeData.lightTheme,
+        initialRoute: CredBevyRoutes.HOME_SCREEN,
         routes: credBevRoutes
       ),
     );

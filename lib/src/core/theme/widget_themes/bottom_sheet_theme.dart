@@ -1,11 +1,11 @@
 import 'package:credbevy_task/src/global_export.dart';
 
-class CredBevBottomSheetTheme{
-  const CredBevBottomSheetTheme._();
+class CredBevyBottomSheetTheme{
+  const CredBevyBottomSheetTheme._();
 
   static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
-    // backgroundColor: ShamaColors.white,
-    // modalBackgroundColor: ShamaColors.white,
+    backgroundColor: CredBevyColors.transparent,
+    modalBackgroundColor: CredBevyColors.white,
   );
 
   //darkTheme will be implemented here

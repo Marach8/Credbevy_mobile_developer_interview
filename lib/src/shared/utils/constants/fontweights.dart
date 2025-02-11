@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CredBevFontWeights{
-  const CredBevFontWeights._sharedInstance();
+class CredBevyFontWeights{
+  const CredBevyFontWeights._sharedInstance();
 
   static const w100 = FontWeight.w100;
 

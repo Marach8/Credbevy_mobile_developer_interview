@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ShamaMultipleTextsRichText extends StatelessWidget {
+class CredBevyMultipleTextsRichText extends StatelessWidget {
   final Map<String, TextStyle> items;
   final TextAlign? textAlign;
-  const ShamaMultipleTextsRichText({
+  const CredBevyMultipleTextsRichText({
     super.key,
     required this.items,
     this.textAlign

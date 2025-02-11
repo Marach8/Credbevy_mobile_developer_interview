@@ -1,7 +1,7 @@
 
 
-class CredBevFontSizes{
-  const CredBevFontSizes._();
+class CredBevyFontSizes{
+  const CredBevyFontSizes._();
 
   static double size8 = 8.0;
 
@@ -10,6 +10,8 @@ class CredBevFontSizes{
   static double size12 = 12.0;
 
   static double size14 = 14.0;
+
+  static double size15 = 15.0;
 
   static double size16 = 16.0;
 

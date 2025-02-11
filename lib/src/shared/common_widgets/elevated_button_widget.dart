@@ -1,20 +1,21 @@
-
 import 'package:credbevy_task/src/global_export.dart';
 
-class GradientElevetedBtn extends StatelessWidget {
+class CredBevyElevetedBtn extends StatelessWidget {
   final VoidCallback onPressed;
-  final String btnTitle;
-  const GradientElevetedBtn({
+  final String? btnTitle;
+  final Widget? child;
+  const CredBevyElevetedBtn({
     super.key,
     required this.onPressed,
-    required this.btnTitle
+    this.btnTitle,
+    this.child
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Text(btnTitle),
+      child: child ?? Text(btnTitle ?? ''),
     );
   }
 }

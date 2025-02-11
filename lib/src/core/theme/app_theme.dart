@@ -5,15 +5,15 @@ class CredBevThemeData{
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    // fontFamily: ShamaStrings.FUNNEL_SANS,
-    // brightness: Brightness.light,
-    // scaffoldBackgroundColor: ShamaColors.white,
-    // textTheme: ShamaTextTheme.lightTextTheme,
-    // //iconTheme: ShamaIconTheme.lightIconTheme,
-    // elevatedButtonTheme: ShamaElevatedButtonTheme.lightElevatedButtonTheme,
-    // appBarTheme: ShamaAppBarTheme.lightAppBarTheme,
-    // bottomSheetTheme: ShamaBottomSheetTheme.lightBottomSheetTheme,
-    // outlinedButtonTheme: ShamaOutlinedButtonTheme.lightOutlinedButtonTheme,
+    fontFamily: CredBevyStrings.INTER,
+    brightness: Brightness.light,
+    scaffoldBackgroundColor: CredBevyColors.white,
+    textTheme: CredBevyTextTheme.lightTextTheme,
+    iconTheme: CredBevyIconTheme.lightIconTheme,
+    elevatedButtonTheme: CredBevyElevatedButtonTheme.lightElevatedButtonTheme,
+    appBarTheme: CredBevAppBarTheme.lightAppBarTheme,
+    bottomSheetTheme: CredBevyBottomSheetTheme.lightBottomSheetTheme,
+    outlinedButtonTheme: CredBevyOutlinedButtonTheme.lightOutlinedButtonTheme,
   );
 
 

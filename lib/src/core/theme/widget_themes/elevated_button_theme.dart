@@ -1,21 +1,21 @@
 import 'package:credbevy_task/src/global_export.dart';
 
-class CredBevElevatedButtonTheme{
-  const CredBevElevatedButtonTheme._();
+class CredBevyElevatedButtonTheme{
+  const CredBevyElevatedButtonTheme._();
 
   static ElevatedButtonThemeData lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      //foregroundColor: ShamaColors.white,
-      padding: EdgeInsets.symmetric(vertical: 10),
-      fixedSize: Size(0, 56),
-      // backgroundColor: ShamaColors.white,
-      // textStyle: TextStyle(
-      //   fontFamily: ShamaStrings.FUNNEL_SANS,
-      //   fontSize: ShamaFontSizes.size16,
-      //   fontWeight: ShamaFontWeights.w700
-      // ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35))
+      foregroundColor: CredBevyColors.hexF0F0F0,
+      fixedSize: Size(0, 52),
+      backgroundColor: CredBevyColors.hex171728,
+      textStyle: TextStyle(
+        fontFamily: CredBevyStrings.INTER,
+        fontSize: CredBevyFontSizes.size16,
+        fontWeight: CredBevyFontWeights.w700,
+        color: CredBevyColors.hexF0F0F0,
+      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))
     )
   );
 

@@ -6,9 +6,7 @@ class CredBevAppBarTheme{
   static AppBarTheme lightAppBarTheme = AppBarTheme(
     elevation: 0,
     scrolledUnderElevation: 0,
-    // backgroundColor: ShamaColors.white,
-    // foregroundColor: ShamaColors.white
-    //titleTextStyle: const TextStyle()
+    backgroundColor: CredBevyColors.white,
   );
 
 

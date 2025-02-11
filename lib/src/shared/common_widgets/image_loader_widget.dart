@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ShamaImgLoader extends StatelessWidget {
+class CredBevImgLoader extends StatelessWidget {
   final String imagePath;
   final String? package;
   final BoxFit boxFit;
   final double? height, width;
 
-  const ShamaImgLoader({
+  const CredBevImgLoader({
     super.key,
     required this.imagePath,
     this.height = 35,

@@ -1,21 +1,27 @@
 // ignore_for_file: constant_identifier_names
 
-class CredBevStrings{
-  const CredBevStrings._();
+class CredBevyStrings{
+  const CredBevyStrings._();
 
   static const SVG = 'svg';
   static const PNG = 'png';
   static const JPEG = 'jpeg';
-  static const FUNNEL_SANS = 'Funnel Sans';
-  static const SHAMA = 'Shama';
+  static const INTER = 'Inter';
 
-  static const SIGN_UP = 'Sign up';
-  static const LOGIN = 'Login';
-  static const LISTEN_2_FAV_PREACHERS_ND_ARTISTS = 'Listen to your favorite preachers & artistes on ';
-  static const KEEP_UR_SPIRIT = 'Keep your spirit ';
-  static const CHARGED = 'Charged ';
-  static const ON_D_GO_WITH_CHANTS_4RM_FAV_MINISTERS = 'on the go with chants from your favorite ministers';
-  static const LOOKING_2_HOST_UR_PODCAST_OR_BUILD_COMMUNITY = 'Looking to host your podcast or build a community for your ';
-  static const CHRISTIAN_CONTENTS = 'Christian contents? ';
-  static const JOIN_SHAMA_4_FREE = 'Join Shama for FREE';
+  static const MY_CARDS = 'My Cards';
+  static const TXN_HISTORY = 'Transaction History';
+  static const ANALYTICS = 'Analytics';
+  static const SEND_MONEY = 'Send Money';
+  static const CURRENT_BALANCE = 'Current Balance';
+  static const FAV = 'Favourites';
+  static const ALL_FRNDS = 'All Friends';
+  static const NAME = 'Name';
+  static const EXPIRY = 'Expiry';
+  static const AMOUNT = 'Amount \$';
+  static const TRF_SUCCESSFULLY_SENT_2 = 'Transfer successfully sent to ';
+  static const BACK = 'Back';
+  static const REFERENCE = 'Reference';
+  static const HOW_MUCH_2_SEND = 'How much do you want to send?';
+  static const SAMPLE_NAME = 'Walter White';
+  static const TRSF_REASON = 'What is the transfer for?';
 }
