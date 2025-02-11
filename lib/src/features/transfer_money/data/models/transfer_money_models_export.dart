@@ -1,0 +1,1 @@
+export 'suggested_artist_model.dart';
