@@ -10,6 +10,7 @@ class CredBevThemeData{
     scaffoldBackgroundColor: CredBevyColors.white,
     textTheme: CredBevyTextTheme.lightTextTheme,
     iconTheme: CredBevyIconTheme.lightIconTheme,
+    inputDecorationTheme: CredBevyInputDecorationTheme.lightInputDecorationTheme,
     elevatedButtonTheme: CredBevyElevatedButtonTheme.lightElevatedButtonTheme,
     appBarTheme: CredBevAppBarTheme.lightAppBarTheme,
     bottomSheetTheme: CredBevyBottomSheetTheme.lightBottomSheetTheme,

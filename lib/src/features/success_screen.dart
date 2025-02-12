@@ -5,6 +5,7 @@ class CredBevSuccessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final arguments = ModalRoute.of(context)?.settings.arguments as List<String>?;
     return CredBevyAnnotatedRegion(
       child: Scaffold(
         body: Center(
@@ -18,7 +19,7 @@ class CredBevSuccessScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 Text(
-                  '\$5,000',
+                  '\$${arguments?.first.formatPrice()}',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
                 const SizedBox(height: 20),
@@ -29,13 +30,13 @@ class CredBevSuccessScreen extends StatelessWidget {
                       color: CredBevyColors.hex212B36,
                       fontSize: CredBevyFontSizes.size16
                     ),
-                    'Walter White': Theme.of(context).textTheme.headlineSmall!.copyWith(
+                    (arguments?[1] ?? ''): Theme.of(context).textTheme.headlineSmall!.copyWith(
                       color: CredBevyColors.hex212B36
                     )
                   },
                 ),
                 Text(
-                  'Ref: The latest batch is pure',
+                  'Ref: ${arguments?.last ?? ''}',
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],
@@ -45,7 +46,7 @@ class CredBevSuccessScreen extends StatelessWidget {
 
         bottomSheet: CredBevyContainer(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          width: CredBevHelperFuncs.getScreenWidth(context),
+          width: CredBevyHelperFuncs.getScreenWidth(context),
           child: CredBevyElevetedBtn(
             onPressed: () => Navigator.pop(context),
             btnTitle: CredBevyStrings.BACK,

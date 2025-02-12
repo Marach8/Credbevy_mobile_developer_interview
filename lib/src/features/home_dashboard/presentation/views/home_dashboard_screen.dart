@@ -1,9 +1,25 @@
 import 'package:credbevy_task/src/global_export.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:iconsax/iconsax.dart';
 
-class CredBevyHomeScreen extends StatelessWidget {
+class CredBevyHomeScreen extends ConsumerStatefulWidget {
   const CredBevyHomeScreen({super.key});
+
+  @override
+  ConsumerState<CredBevyHomeScreen> createState() => _CredBevyHomeScreenState();
+}
+
+class _CredBevyHomeScreenState extends ConsumerState<CredBevyHomeScreen> {
+  @override
+  void initState(){
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _performInitializations());
+  }
+
+  void _performInitializations(){
+    ref.read(creditCardsProvider.notifier).fetchCreditCards();
+    ref.read(expensesProvider.notifier).fetchExpenses();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -38,18 +54,20 @@ class CredBevyHomeScreen extends StatelessWidget {
         ),
 
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 20),
-              child: Text(
-                CredBevyStrings.MY_CARDS,
-                style: Theme.of(context).textTheme.headlineLarge,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  CredBevyStrings.MY_CARDS,
+                  style: Theme.of(context).textTheme.headlineLarge,
+                ),
               ),
             ),
             const SizedBox(height: 10),
         
-            const ListViewOfDebitCards(),
+            const CreditCardsViewWidget(),
         
             const SizedBox(height: 20),
             Padding(
@@ -61,15 +79,13 @@ class CredBevyHomeScreen extends StatelessWidget {
                     CredBevyStrings.TXN_HISTORY,
                     style: Theme.of(context).textTheme.titleSmall,
                   ),
-                  Icon(Icons.more_vert)
+                  Icon(Iconsax.filter, color: CredBevyColors.black)
                 ],
               ),
             ),
 
             const SizedBox(height: 20,),
-            Expanded(
-              child: TxnHistoryWidget(),
-            )
+            const TxnHistoryWidget()
         
           ],
         ),
@@ -99,7 +115,12 @@ class _BottomButtons extends StatelessWidget {
           const SizedBox(width: 15),
           Expanded(
             child: ElevatedButton.icon(
-              onPressed: () => Navigator.of(context).pushNamed(CredBevyRoutes.TRANSFER_MONEY_SCREEN),
+              onPressed: () {
+                final ref = CredBevyHelperFuncs.getRef(context);
+                ref.read(balanceProvider.notifier).fetchbalance();
+                ref.read(beneficiariesProvider.notifier).fetchBeneficiaries();
+                Navigator.of(context).pushNamed(CredBevyRoutes.TRANSFER_MONEY_SCREEN);
+              },
               icon: CredBevyContainer(
                 padding: const EdgeInsets.all(1), radius: 3,
                 border: Border.all(color: CredBevyColors.hexF0F0F0),

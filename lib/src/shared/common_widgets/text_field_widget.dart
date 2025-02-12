@@ -20,7 +20,6 @@ class CredBevyTextField extends StatelessWidget {
 
   @override
   Widget build(context) {
-
     return TextFormField(
       validator: validator,
       cursorColor: CredBevyColors.hex444449,
@@ -32,27 +31,10 @@ class CredBevyTextField extends StatelessWidget {
         fontSize: CredBevyFontSizes.size16,
       ),
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
-        fillColor: CredBevyColors.transparent,
-        filled: true,
         hintText: hintText,
         hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
           fontSize: CredBevyFontSizes.size16,
           color: CredBevyColors.hexCDCDD1
-        ),
-        enabledBorder: const OutlineInputBorder().copyWith(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            width: 1.5,
-            color: CredBevyColors.hexE0E0E0
-          )
-        ),
-        focusedBorder: const OutlineInputBorder().copyWith(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            width: 1.5,
-            color: CredBevyColors.hex444449
-          )
         ),
       ),
     );
