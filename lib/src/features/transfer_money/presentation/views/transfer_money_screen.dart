@@ -76,7 +76,7 @@ class _CredBevTrnsfrMoneyScreenState extends State<CredBevTrnsfrMoneyScreen> {
                           child: CredBevyLoadingIndicator(key: ValueKey(0), size: 25),
                         ) : 
                         (balance.value == null) ? CredBevyRefreshWidget(
-                          key: ValueKey(1),
+                          key: ValueKey(1), color: CredBevyColors.black,
                           onRefresh: () async{
                             final response = await ref.watch(balanceProvider.notifier).fetchbalance();
                             if(context.mounted && !response.isSuccessful!){
@@ -106,7 +106,10 @@ class _CredBevTrnsfrMoneyScreenState extends State<CredBevTrnsfrMoneyScreen> {
           
               const SizedBox(height: 25),
           
-              const Beneficiaries(),
+              Align(
+                alignment: Alignment.center,
+                child: const Beneficiaries()
+              ),
           
               const SizedBox(height: 10),
           

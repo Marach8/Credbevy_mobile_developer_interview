@@ -48,7 +48,7 @@ class _CredBevyHomeScreenState extends ConsumerState<CredBevyHomeScreen> {
             CredBevyContainer(
               height: 46, width: 46,
               boxShape: BoxShape.circle,
-              color: Colors.black,
+              color: CredBevyColors.black
             )
           ],
         ),
