@@ -38,6 +38,9 @@ dependencies:
   flutter_svg: ^2.0.17
   iconsax: ^0.0.8
   font_awesome_flutter: ^10.8.0
+  dio: ^5.8.0+1
+  intl: ^0.20.2
+  another_flushbar: ^1.12.30
 
 dev_dependencies:
   flutter_test:

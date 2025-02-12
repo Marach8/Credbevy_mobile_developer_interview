@@ -24,4 +24,11 @@ class CredBevyStrings{
   static const HOW_MUCH_2_SEND = 'How much do you want to send?';
   static const SAMPLE_NAME = 'Walter White';
   static const TRSF_REASON = 'What is the transfer for?';
+  static const SUCCESSFUL = 'Operation Successful.';
+  static const EMPTY_FIELD = 'This field cannot be empty!';
+  static const INVALID_NUMBER = 'Invalid number!';
+  static const INVALID_BENEFICIARY = 'This beneficiary does not exist!';
+  static const IMG_UNAVAILABLE = 'image unavailable';
+  static const INVALID_INPUT = 'Invalid input!!!';
 }
+

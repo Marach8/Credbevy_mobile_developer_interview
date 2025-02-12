@@ -6,9 +6,9 @@ class CredBevyTextTheme{
   static TextTheme lightTextTheme = TextTheme( 
     
     // displayLarge: TextStyle(
-    //   color: ShamaColors.white,
-    //   fontSize: ShamaFontSizes.size36,
-    //   fontWeight: ShamaFontWeights.w400,
+    //   color: CredBevyColors.hexF0F0F0,
+    //   fontSize: CredBevyFontSizes.size20,
+    //   fontWeight: CredBevyFontWeights.w800,
     //   overflow: TextOverflow.ellipsis,
     // ),
  

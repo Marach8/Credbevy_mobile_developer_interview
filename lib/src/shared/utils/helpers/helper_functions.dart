@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:credbevy_task/src/global_export.dart';
 
-class CredBevHelperFuncs{
-  const CredBevHelperFuncs._();
+class CredBevyHelperFuncs{
+  const CredBevyHelperFuncs._();
 
   static double getScreenWidth (BuildContext context)
     => MediaQuery.sizeOf(context).width;
@@ -45,7 +45,7 @@ class CredBevHelperFuncs{
     if (_debounce?.isActive ?? false) _debounce!.cancel();
 
     _debounce = Timer(
-      Duration(seconds: duration),
+      Duration(milliseconds: duration),
       () {
         if (args != null) {Function.apply(func, args);}
         else {func();}
@@ -53,7 +53,38 @@ class CredBevHelperFuncs{
     );
   }
 
-  void disposeDebouncer() {
+  static void disposeDebouncer() {
     _debounce?.cancel();
+  }
+
+
+  static String? add2OrSubtract4rmAmount({
+    required String number2AddOrSubtractFrom,
+    required String numberBeingAddedOrSubtracted
+  }){
+    double? parsedNumber = double.parse(numberBeingAddedOrSubtracted);
+    double? parsedCurrentAmt = double.tryParse(number2AddOrSubtractFrom);
+
+    if(number2AddOrSubtractFrom.isEmpty && parsedNumber >= 0){
+      return parsedNumber.toString();
+    }
+
+    if (parsedCurrentAmt != null) {
+      double newAmount;
+
+      if (parsedNumber.isNegative) {
+        if (parsedCurrentAmt >= 10) {
+          newAmount = parsedNumber + parsedCurrentAmt;
+        } 
+        else {return null;}
+      } 
+      else {
+        newAmount = parsedNumber + parsedCurrentAmt;
+      }
+
+      return newAmount.toString();
+    } else {
+      return null;
+    }
   }
 }
