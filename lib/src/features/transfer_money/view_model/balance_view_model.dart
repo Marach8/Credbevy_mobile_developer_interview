@@ -13,8 +13,8 @@ class BalanceNotifier extends StateNotifier<AsyncValue<BalanceResponseModel?>> {
   final Ref ref;
   final TransferRepo transferRepo;
 
-  Future<GenericResponseModel> fetchbalance() async {
-    //To prevent redundant api calls 
+  Future<GenericResponseModel> fetchBalance() async {
+    //To prevent redundant fetches 
     if(state.value == null) {
       state = const AsyncLoading(); 
       try{

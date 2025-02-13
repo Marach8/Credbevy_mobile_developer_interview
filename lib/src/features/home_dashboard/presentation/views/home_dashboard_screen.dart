@@ -117,7 +117,7 @@ class _BottomButtons extends StatelessWidget {
             child: ElevatedButton.icon(
               onPressed: () {
                 final ref = CredBevyHelperFuncs.getRef(context);
-                ref.read(balanceProvider.notifier).fetchbalance();
+                ref.read(balanceProvider.notifier).fetchBalance();
                 ref.read(beneficiariesProvider.notifier).fetchBeneficiaries();
                 Navigator.of(context).pushNamed(CredBevyRoutes.TRANSFER_MONEY_SCREEN);
               },

@@ -78,7 +78,7 @@ class _CredBevTrnsfrMoneyScreenState extends State<CredBevTrnsfrMoneyScreen> {
                         (balance.value == null) ? CredBevyRefreshWidget(
                           key: ValueKey(1), color: CredBevyColors.black,
                           onRefresh: () async{
-                            final response = await ref.watch(balanceProvider.notifier).fetchbalance();
+                            final response = await ref.watch(balanceProvider.notifier).fetchBalance();
                             if(context.mounted && !response.isSuccessful!){
                               showAppNotification(
                                 context: context,

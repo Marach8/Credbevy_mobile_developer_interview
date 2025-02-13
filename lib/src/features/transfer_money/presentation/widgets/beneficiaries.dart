@@ -1,9 +1,7 @@
 import 'package:credbevy_task/src/global_export.dart';
 
 class Beneficiaries extends ConsumerWidget {
-  const Beneficiaries({
-    super.key,
-  });
+  const Beneficiaries({super.key});
 
   @override
   Widget build(context, ref) {
@@ -55,7 +53,7 @@ class Beneficiaries extends ConsumerWidget {
                     );
                   },
                   margin: const EdgeInsets.only(left: 20, bottom: 20),
-                  radius: 23,
+                  radius: 23, duration: 200,
                   padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
                   color: isSelected ? CredBevyColors.hex171728 : CredBevyColors.white,
                   boxShadow: [

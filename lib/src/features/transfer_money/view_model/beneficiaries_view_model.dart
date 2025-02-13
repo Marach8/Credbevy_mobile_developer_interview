@@ -26,7 +26,7 @@ class BeneficiariesNotifier extends StateNotifier<AsyncValue<List<User>?>> {
             state = AsyncData(beneficiaries);
             
             //Immediately we are done fetching beneficiaries, set the name of the 
-            //first beneficiary to be the hinttext of the  "Name" textfield
+            //first beneficiary to be the hinttext of the "Name" textfield
             CredBevyHelperFuncs.setAProvider(
               provider: globalStringProvider(CredBevyStrings.NAME),
               value: beneficiaries?.first.fullname ?? CredBevyStrings.NAME,

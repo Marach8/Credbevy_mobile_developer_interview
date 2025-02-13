@@ -62,29 +62,18 @@ class CredBevyHelperFuncs{
     required String number2AddOrSubtractFrom,
     required String numberBeingAddedOrSubtracted
   }){
+    double result;
+
     double? parsedNumber = double.parse(numberBeingAddedOrSubtracted);
     double? parsedCurrentAmt = double.tryParse(number2AddOrSubtractFrom);
 
-    if(number2AddOrSubtractFrom.isEmpty && parsedNumber >= 0){
-      return parsedNumber.toString();
+    if(number2AddOrSubtractFrom.isEmpty){
+      result = parsedNumber;
+    }
+    else{
+      result = parsedNumber + (parsedCurrentAmt ?? 0.0);
     }
 
-    if (parsedCurrentAmt != null) {
-      double newAmount;
-
-      if (parsedNumber.isNegative) {
-        if (parsedCurrentAmt >= 10) {
-          newAmount = parsedNumber + parsedCurrentAmt;
-        } 
-        else {return null;}
-      } 
-      else {
-        newAmount = parsedNumber + parsedCurrentAmt;
-      }
-
-      return newAmount.toString();
-    } else {
-      return null;
-    }
+    return result > 0 ? result.toString() : null;
   }
 }
