@@ -15,19 +15,23 @@ class TxnHistoryWidget extends ConsumerWidget {
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: CredBevyLoadingIndicator(),
         )
-        : (expenses.value ?? []).isEmpty ? CredBevyRefreshWidget(
+        : (expenses.value ?? []).isEmpty ? Padding(
           key: ValueKey(1),
-          showImage: true, color: CredBevyColors.black,
-          onRefresh: () async{
-            final response = await  ref.read(expensesProvider.notifier).fetchExpenses();
-            if(context.mounted && !response.isSuccessful!){
-              showAppNotification(
-                context: context,
-                icon: Icon(Icons.warning, color: CredBevyColors.red,),
-                text: response.responseMessage ?? ''
-              );
-            }
-          },
+          padding: const EdgeInsets.only(bottom: 50),
+          child: CredBevyRefreshWidget(
+            text: CredBevyStrings.DATA_UNAVAILABLE,
+            showImage: true, color: CredBevyColors.black,
+            onRefresh: () async{
+              final response = await  ref.read(expensesProvider.notifier).fetchExpenses();
+              if(context.mounted && !response.isSuccessful!){
+                showAppNotification(
+                  context: context,
+                  icon: Icon(Icons.warning, color: CredBevyColors.red,),
+                  text: response.responseMessage ?? ''
+                );
+              }
+            },
+          ),
         ) : ListView.builder(
           key: ValueKey(2),
           itemCount: expenses.value?.length,

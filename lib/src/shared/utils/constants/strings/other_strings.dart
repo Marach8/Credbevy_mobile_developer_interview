@@ -29,6 +29,7 @@ class CredBevyStrings{
   static const INVALID_NUMBER = 'Invalid number!';
   static const INVALID_BENEFICIARY = 'This beneficiary does not exist!';
   static const IMG_UNAVAILABLE = 'image unavailable';
+  static const DATA_UNAVAILABLE = 'Data unavailable...';
   static const INVALID_INPUT = 'Invalid input!!!';
 }
 

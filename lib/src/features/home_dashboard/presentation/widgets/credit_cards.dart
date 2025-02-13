@@ -12,16 +12,17 @@ class CreditCardsViewWidget extends ConsumerWidget {
         child: CredBevyLoadingIndicator(),
       )
       : (creditCards.value ?? []).isEmpty ? CredBevyRefreshWidget(
+        text: CredBevyStrings.DATA_UNAVAILABLE,
         showImage: true, color: CredBevyColors.black,
         onRefresh: () async{
           final response = await  ref.read(creditCardsProvider.notifier).fetchCreditCards();
           if(context.mounted && !response.isSuccessful!){
-              showAppNotification(
-                context: context,
-                icon: Icon(Icons.warning, color: CredBevyColors.red,),
-                text: response.responseMessage ?? ''
-              );
-            }
+            showAppNotification(
+              context: context,
+              icon: Icon(Icons.warning, color: CredBevyColors.red,),
+              text: response.responseMessage ?? ''
+            );
+          }
         },
       ) : CredBevyContainer(
         boxShadow: [

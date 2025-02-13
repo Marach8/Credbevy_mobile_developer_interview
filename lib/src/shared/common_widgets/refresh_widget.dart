@@ -30,7 +30,7 @@ class CredBevyRefreshWidget extends StatelessWidget {
           ),
           if(text != null)
             Text(text ?? '', style: Theme.of(context).textTheme.titleMedium),
-          if(text != null || showImage != null) const SizedBox(height: 20),
+          if(text != null || showImage != null) const SizedBox(height: 10),
           if(onRefresh != null) GestureDetector(
             onTap: onRefresh,
             child: Icon(Iconsax.refresh, color: color)

@@ -15,6 +15,7 @@ class Beneficiaries extends ConsumerWidget {
         ),
       )
       : (beneficiaries.value ?? []).isEmpty ? CredBevyRefreshWidget(
+        text: CredBevyStrings.DATA_UNAVAILABLE,
         showImage: true, color: CredBevyColors.black,
         onRefresh: () async{
           final response = await  ref.read(creditCardsProvider.notifier).fetchCreditCards();
