@@ -23,7 +23,14 @@ class CreditCardsViewWidget extends ConsumerWidget {
               );
             }
         },
-      ) : SizedBox(
+      ) : CredBevyContainer(
+        boxShadow: [
+          BoxShadow(
+            spreadRadius: 0, blurRadius: 30,
+            offset: Offset(0, 10),
+            color: CredBevyColors.hexFBAEEE.withValues(alpha: 0.3713)
+          )
+        ],
         height: 190,
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),
@@ -47,13 +54,6 @@ class CreditCardsViewWidget extends ConsumerWidget {
                   CredBevyColors.hexD3E8E1,
                 ]
               ),
-              boxShadow: [
-                BoxShadow(
-                  spreadRadius: 0, blurRadius: 40,
-                  offset: Offset(0, 20),
-                  color: CredBevyColors.hexFBAEEE.withValues(alpha: 0.3713)
-                )
-              ],
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,

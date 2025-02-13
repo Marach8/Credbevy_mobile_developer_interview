@@ -25,6 +25,8 @@ class _CredBevTrnsfrMoneyScreenState extends State<CredBevTrnsfrMoneyScreen> {
     _nameCntrl.dispose();
     _amtCntrl.dispose();
     _refCntrl.dispose();
+    //Once this widget is unmounted, cancel timer if active
+    CredBevyHelperFuncs.disposeDebouncer();
     super.dispose();
   }
 
