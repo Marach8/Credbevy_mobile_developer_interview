@@ -48,7 +48,7 @@ class _CredBevyHomeScreenState extends ConsumerState<CredBevyHomeScreen> {
             CredBevyContainer(
               height: 46, width: 46,
               boxShape: BoxShape.circle,
-              color: Colors.black,
+              color: CredBevyColors.black
             )
           ],
         ),
@@ -117,7 +117,7 @@ class _BottomButtons extends StatelessWidget {
             child: ElevatedButton.icon(
               onPressed: () {
                 final ref = CredBevyHelperFuncs.getRef(context);
-                ref.read(balanceProvider.notifier).fetchbalance();
+                ref.read(balanceProvider.notifier).fetchBalance();
                 ref.read(beneficiariesProvider.notifier).fetchBeneficiaries();
                 Navigator.of(context).pushNamed(CredBevyRoutes.TRANSFER_MONEY_SCREEN);
               },
